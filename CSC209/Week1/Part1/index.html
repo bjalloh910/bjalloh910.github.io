@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple HTML Document</title>
+</head>
+    <style>
+        body {background-color: #FFB4A2;}
+        .intro{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .puppy-images{
+            border-radius: 10px;
+            margin: auto;
+            background: #FFCDB2;
+            padding: 20px;
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        .puppy-images img{
+            border-radius: 10px;
+        }
+    </style>
+<body>
+    <div class="intro">
+        <h1>Puppies for sale</h1>
+        <p>$30 each</p>
+    </div>
+    
+    <div class="puppy-images">
+        <div>
+            <img src="/pics/pup1.jpeg">
+        </div>
+        <div>
+            <img src="/pics/pup2.jpeg">
+        </div>
+        <div>
+            <img src="/pics/pup3.jpeg">
+        </div>
+    </div>
+</body>
+</html>
