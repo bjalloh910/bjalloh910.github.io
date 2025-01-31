@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #84c6da;
+        }
+        .h1Div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .travel-table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+            font-family: Arial, sans-serif;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+        }
+
+        .travel-table th {
+            background-color: #2c3e50;
+            color: #ffffff;
+            padding: 15px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .travel-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .travel-table tbody tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        .travel-table tbody tr:hover {
+            background-color: #f5f5f5;
+            transition: background-color 0.3s ease;
+        }
+
+        .travel-table td:first-child {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .btn{
+            background-color: #315e92;
+            padding: 10px;
+            border: 0px;
+            border-radius: 10px;
+        }
+        .btn:hover{
+            background-color: #1163b6;
+        }
+        .btn a{
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="h1Div">
+        <h1>Destination Info Table</h1>
+    </div>
+    <button class="btn">
+        <a href="./tut7ul.html">Here is a table feature. Go to next tutorial</a>
+    </button>
+
+    <table class="travel-table">
+        <thead>
+            <tr>
+                <th>Destination</th>
+                <th>Best Time to Visit</th>
+                <th>Main Attractions</th>
+                <th>Average Cost/Day</th>
+                <th>Visa Requirements</th>
+                <th>Local Currency</th>
+                <th>Language</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Bali, Indonesia</td>
+                <td>April to October (Dry Season)</td>
+                <td>
+                    - Ubud Rice Terraces<br>
+                    - Uluwatu Temple<br>
+                    - Nusa Penida Island<br>
+                    - Seminyak Beach
+                </td>
+                <td>$50-150 USD</td>
+                <td>30-day visa-free for many countries</td>
+                <td>Indonesian Rupiah (IDR)</td>
+                <td>Indonesian, Balinese (English widely used in tourist areas)</td>
+            </tr>
+            <tr>
+                <td>South Africa</td>
+                <td>May to September (Dry Season)</td>
+                <td>
+                    - Kruger National Park<br>
+                    - Table Mountain<br>
+                    - Cape Town Waterfront<br>
+                    - Garden Route
+                </td>
+                <td>$100-200 USD</td>
+                <td>90-day visa-free for many countries</td>
+                <td>South African Rand (ZAR)</td>
+                <td>11 official languages (English widely used)</td>
+            </tr>
+            <tr>
+                <td>Aruba</td>
+                <td>April to August (Off Season)</td>
+                <td>
+                    - Eagle Beach<br>
+                    - Arikok National Park<br>
+                    - California Lighthouse<br>
+                    - Baby Beach
+                </td>
+                <td>$200-300 USD</td>
+                <td>Visa-free for US, Canada, EU (check specific requirements)</td>
+                <td>Aruban Florin (AWG)</td>
+                <td>Dutch, Papiamento (English widely spoken)</td>
+            </tr>
+        </tbody>
+    </table>    
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #84c6da;
+        }
+        .h1Div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .travel-list-container {
+        font-family: 'Arial', sans-serif;
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background: linear-gradient(to bottom right, #ffffff, #f8f9fa);
+        border-radius: 10px;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .travel-list {
+            counter-reset: destination-counter;
+            list-style: none;
+            padding: 0;
+        }
+
+        .travel-list li {
+            position: relative;
+            padding: 20px 20px 20px 70px;
+            margin-bottom: 15px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+
+        .travel-list li::before {
+            counter-increment: destination-counter;
+            content: counter(destination-counter);
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 35px;
+            height: 35px;
+            background-color: #2c3e50;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .destination-name {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+
+        .destination-description {
+            color: #666;
+            line-height: 1.5;
+        }
+        .btn{
+            background-color: #315e92;
+            padding: 10px;
+            border: 0px;
+            border-radius: 10px;
+        }
+        .btn:hover{
+            background-color: #1163b6;
+        }
+        .btn a{
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="h1Div">
+        <h1>List of Other Places to Travel to</h1>
+    </div>
+    <button class="btn">
+        <a href="./tut8blackquotes.html">Here is a unordered list feature. Go to next tutorial</a>
+    </button>
+    
+    <div class="travel-list-container">
+        <ol class="travel-list">
+            <li>
+                <div class="destination-name">Santorini, Greece</div>
+                <div class="destination-description">Famous for its stunning white-washed buildings, blue domes, spectacular sunsets, and volcanic beaches. Perfect for romantic getaways and photography enthusiasts.</div>
+            </li>
+            <li>
+                <div class="destination-name">Kyoto, Japan</div>
+                <div class="destination-description">A cultural treasury featuring ancient temples, traditional gardens, geisha districts, and seasonal cherry blossoms. Ideal for experiencing traditional Japanese culture.</div>
+            </li>
+            <li>
+                <div class="destination-name">Machu Picchu, Peru</div>
+                <div class="destination-description">The ancient Incan citadel set high in the Andes Mountains. A bucket-list destination for history buffs and adventure seekers.</div>
+            </li>
+            <li>
+                <div class="destination-name">Maldives</div>
+                <div class="destination-description">Pristine white-sand beaches, crystal-clear waters, and luxurious overwater bungalows. Perfect for honeymoons and tropical paradise seekers.</div>
+            </li>
+            <li>
+                <div class="destination-name">New Zealand</div>
+                <div class="destination-description">Land of dramatic landscapes, from glaciers to geothermal springs. Ideal for outdoor enthusiasts and Lord of the Rings fans.</div>
+            </li>
+            <li>
+                <div class="destination-name">Iceland</div>
+                <div class="destination-description">Home to the Northern Lights, volcanic landscapes, hot springs, and dramatic waterfalls. Great for nature lovers and photographers.</div>
+            </li>
+            <li>
+                <div class="destination-name">Safari in Tanzania</div>
+                <div class="destination-description">Witness the Great Migration in the Serengeti and explore the Ngorongoro Crater. Perfect for wildlife enthusiasts and adventure travelers.</div>
+            </li>
+            <li>
+                <div class="destination-name">Amalfi Coast, Italy</div>
+                <div class="destination-description">Stunning coastal scenery, charming villages, and incredible Italian cuisine. Ideal for food lovers and scenic drive enthusiasts.</div>
+            </li>
+        </ol>
+    </div>
+</body>
+</html>
