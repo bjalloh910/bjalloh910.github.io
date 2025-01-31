@@ -9,6 +9,7 @@
         }
         .h1Div{
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
         }
@@ -17,6 +18,7 @@
             padding: 10px;
             border: 0px;
             border-radius: 10px;
+            font-size: 16px;
         }
         .btn:hover{
             background-color: #1163b6;
@@ -25,19 +27,60 @@
             color: white;
             text-decoration: none;
         }
+        .nav-box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .nav {
+            margin-top: 20px;
+            background-color: #f8f9fa;
+            padding: 10px 60px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            width: 400px;
+        }
+
+        .nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav li {
+            margin: 8px 0;
+        }
+
+        .nav a {
+            color: #333;
+            text-decoration: none;
+            display: block;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+
+        .nav a:hover {
+            background-color: #e9ecef;
+            color: #007bff;
+        }
     </style>
 </head>
 <body>
     <div class="h1Div">
         <h1>Links to different destinations</h1>
-    </div>
-    <button class="btn">
-        <a href="./tut3article.html">Here is a navigation bar. Go to next tutorial</a>
-    </button>
 
-    <nav>
+        <button class="btn">
+            <a href="./tut3article.html">Here is a navigation bar. Go to next tutorial</a>
+        </button>
+
+        <button class="btn" style="margin-top: 10px;">
+            <a href="https://www.w3schools.com/Tags/tag_nav.asp">Link to tutorial</a>
+        </button>
+    </div>
+
+<div class="nav-box">
+    <nav class="nav">
         <ul>
-          <li><a href="index.html">Home</a></li>
           <li><a href="./tut1header.html">Header</a></li>
           <li><a href="./tut2nav.html">Navigation Bar</a></li>
           <li><a href="./tut3article.html">Article</a></li>
@@ -50,5 +93,6 @@
           <li><a href="./tut10footer.html">Footer</a></li>
         </ul>
     </nav>
+</div>
 </body>
 </html>

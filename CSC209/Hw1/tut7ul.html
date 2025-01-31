@@ -9,17 +9,18 @@
         }
         .h1Div{
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
         }
         .travel-list-container {
-        font-family: 'Arial', sans-serif;
-        max-width: 800px;
-        margin: 20px auto;
-        padding: 20px;
-        background: linear-gradient(to bottom right, #ffffff, #f8f9fa);
-        border-radius: 10px;
-        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            font-family: 'Arial', sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: linear-gradient(to bottom right, #ffffff, #f8f9fa);
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
         }
 
         .travel-list {
@@ -29,6 +30,7 @@
         }
 
         .travel-list li {
+            font-family: Arial, sans-serif;
             position: relative;
             padding: 20px 20px 20px 70px;
             margin-bottom: 15px;
@@ -73,6 +75,7 @@
             padding: 10px;
             border: 0px;
             border-radius: 10px;
+            font-size: 16px;
         }
         .btn:hover{
             background-color: #1163b6;
@@ -86,10 +89,15 @@
 <body>
     <div class="h1Div">
         <h1>List of Other Places to Travel to</h1>
+
+        <button class="btn">
+            <a href="./tut8quotes.html">Here is a unordered list feature. Go to next tutorial</a>
+        </button>
+
+        <button class="btn" style="margin-top: 10px;">
+            <a href="https://www.w3schools.com/html/html_lists.asp">Link to tutorial</a>
+        </button>
     </div>
-    <button class="btn">
-        <a href="./tut8blackquotes.html">Here is a unordered list feature. Go to next tutorial</a>
-    </button>
     
     <div class="travel-list-container">
         <ol class="travel-list">

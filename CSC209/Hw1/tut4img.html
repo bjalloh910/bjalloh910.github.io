@@ -9,6 +9,7 @@
         }
         .h1Div{
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
         }
@@ -17,6 +18,7 @@
             padding: 10px;
             border: 0px;
             border-radius: 10px;
+            font-size: 16px;
         }
         .btn:hover{
             background-color: #1163b6;
@@ -25,22 +27,62 @@
             color: white;
             text-decoration: none;
         }
+        img {
+            width: 600px;
+            height: 500px;
+            border-radius: 10px;
+        }
+        .div-img{
+            margin: 10px;
+            background: #1163b6;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
     </style>
 </head>
 <body>
     <div class="h1Div">
         <h1>Travel Article</h1>
+
+        <button class="btn">
+            <a href="./tut5video.html">Here is a image feature. Go to next tutorial</a>
+        </button>
+
+        <button class="btn" style="margin-top: 10px;">
+            <a href="https://www.w3schools.com/html/html_images.asp">Link to tutorial</a>
+        </button>
     </div>
-    <button class="btn">
-        <a href="./tut5video.html">Here is a image feature. Go to next tutorial</a>
-    </button>
 
-    <img src="bali1.jpeg" alt="Bali" width="500" height="600">
-    <img src="bali2.jpeg" alt="Bali" width="500" height="600">
-    <img src="bali3.jpeg" alt="Bali" width="500" height="600">
+    <div class="container">
+        <div class="div-img">
+            <img src="bali1.jpeg" alt="Bali">
+        </div>
 
-    <img src="sa1.jpeg" alt="South Africa" width="500" height="600">
-    <img src="sa2.jpeg" alt="South Africa" width="500" height="600">
-    <img src="sa3.jpeg" alt="South Africa" width="500" height="600">
+        <div class="div-img">
+            <img src="bali2.jpeg" alt="Bali">
+        </div>
+
+        <div class="div-img">
+            <img src="bali4.jpg" alt="Bali">
+        </div>
+        
+       <div class="div-img">
+            <img src="sa1.jpeg" alt="South Africa">
+       </div>
+
+       <div class="div-img">
+            <img src="sa2.jpeg" alt="South Africa">
+       </div>
+
+       <div class="div-img">
+            <img src="sa3.jpeg" alt="South Africa">
+       </div>
+    </div>
 </body>
 </html>

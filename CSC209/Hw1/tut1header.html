@@ -9,6 +9,7 @@
         }
         .h1Div{
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
         }
@@ -17,6 +18,7 @@
             padding: 10px;
             border: 0px;
             border-radius: 10px;
+            font-size: 16px;
         }
         .btn:hover{
             background-color: #1163b6;
@@ -29,11 +31,15 @@
 </head>
 <body>
     <div class="h1Div">
-        <h1>Adventure Awaits</h1>
+        <h1>An Adventure Awaits</h1>
+        <button class="btn">
+            <a href="./tut2nav.html">This is a simple header. Go to next tutorial</a>
+        </button>
+
+        <button class="btn" style="margin-top: 10px;">
+            <a href="https://www.w3schools.com/Tags/tag_header.asp">Link to tutorial</a>
+        </button>
     </div>
-    <button class="btn">
-        <a href="./tut2nav.html">This is a simple header. Go to next tutorial</a>
-    </button>
     
 </body>
 </html>
