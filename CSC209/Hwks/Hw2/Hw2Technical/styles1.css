@@ -1,0 +1,91 @@
+body {
+    background-color: blanchedalmond;
+}
+
+ul li {
+    list-style-type: none;
+}
+.overallContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 30px;
+    gap: 20px 20px;
+    font-size: 18px;
+}
+
+
+.navBox{
+    padding: 40px;
+}
+
+.textInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btnMode{
+    border: none;
+    background-color: rgb(232, 201, 145);
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+#btnMode:hover{
+    background-color: rgb(242, 217, 188);
+}
+#readBtn{
+    background-color: #4CAF50; 
+    border: none;
+    color: white; 
+    padding: 10px 5px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer; 
+    border-radius: 12px; 
+    width: 150px;
+}
+#readBtn:hover{
+    background-color: #6fbb71;
+}
+.mainBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 40px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #FFD700;
+}
+a {
+    color: blue;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
