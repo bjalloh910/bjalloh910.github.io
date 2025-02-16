@@ -1,0 +1,29 @@
+.mainSection{
+    background: #9F2042;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    gap: 20px;
+}
+
+img {
+    border-radius: 20px;
+}
+
+.mePic{
+    text-align: center; 
+}
+
+.workBox{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 20px;
+    margin-top: 20px;
+}
+.vertical-line {
+    width: 2px; /* Line thickness */
+    height: 100px; /* Line height */
+    background-color: white; /* Line color */
+}
+  

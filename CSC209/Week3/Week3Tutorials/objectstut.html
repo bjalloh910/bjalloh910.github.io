@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 3 Tutorial</title>
+</head>
+<body>
+    <h1>This is the object tutorial</h1>
+    
+    <p id="demo"></p>
+    <pre>
+        <code>
+            const person = {firstname:"Bintu", lastname:"Jalloh", age:20}
+        </code>
+    </pre>
+    
+    <script>
+       const person = {firstname:"Bintu", lastname:"Jalloh", age:20}
+
+        document.getElementById("demo").innerHTML = "This is the object: " + "<br>" +
+            `First Name: ${person.firstname}<br>
+             Last Name: ${person.lastname}<br>
+             Age: ${person.age}`;
+    </script>
+</body>
+</html>

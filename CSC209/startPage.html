@@ -4,23 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple HTML Document</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            background-color: #84c6da;
+            background-color: #F8E5EE;
+        }
+        a {
+            text-decoration: none;
+            color: rgb(140, 69, 69);
+            cursor: pointer;
         }
 
     </style>
 </head>
 <body>
-    <h1 style="text-align: center;">Bintu Jalloh 209 Web Programming
-    </h1>
-    <h3>Weekly Homeworks</h3>
-    <hr>
-    <a href="Hwks/Hw1">Go to Hw1 Folder</a><br>
-    <a href="Hwks/Hw2">Go to Hw2 Folder</a><br>
-    <h3>Weekly Assignments </h3>
-    <hr>
-    <a href="Week1">Go to week 1 assignments</a><br>
-    <a href="Week2">Go to week 2 assignments</a><br>
+    <main class="mainSection">
+        <h1 style="text-align: center;">Bintu Jalloh 209 Web Programming</h1>
+        <div class="mePic">
+            <img src="icegif-186.gif" width="200px">
+        </div>
+    </main>
+
+    <div class="workBox">
+        <div>
+            <h3>Weekly Homeworks</h3>
+            <hr>
+            <a href="Hwks/Hw1">Go to the Hw1 folder</a><br>
+            <a href="Hwks/Hw2">Go to the Hw2 folder</a><br>
+        </div>
+        <div class="vertical-line"></div>
+        <div>
+            <h3>Weekly Assignments </h3>
+            <hr>
+            <a href="Week1">Go to Week 1 assignments</a><br>
+            <a href="Week2">Go to Week 2 assignments</a><br>
+        </div>
+    </div>
 </body>
 </html>

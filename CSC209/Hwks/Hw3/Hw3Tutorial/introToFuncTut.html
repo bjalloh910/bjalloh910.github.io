@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 3 Start Page</title>
+    <style>
+        body {
+            background-color: #7697a0
+        }
+    </style>
+</head>
+
+<body>
+
+    <p id="demo"></p>
+
+    <p id="mul"></p><br>
+
+    <button onclick="displayDate()">The time is?</button><br>
+
+    <input id="age" value="18" />
+
+    <button onclick="checkVotingAge()">Try it</button>
+
+    <p id="comp"></p><br>
+
+    <p id="greet"></p><br>
+
+    <p id="loopf"></p><br>
+
+    <p id="switch"></p><br>
+
+    <script>
+        // Display text in paragraph
+        document.getElementById("demo").innerHTML = "Hello JavaScript";
+
+        // output practice
+        document.write(5 + 10 + "<br>");
+
+        // statement, syntax, comment, variables, let practice
+        let x = 2;
+        let y = 4;
+        let z = x + y;
+        console.log(z)
+        document.write(z + "<br>");
+
+        // const practice
+        const name = "John Doe";
+
+        // assignment practice 
+        let x_val = 20;
+        x_val += 5;
+        document.write(x_val + "<br>");
+
+        // function practice for multiplication
+        function multiply(p1, p2) {
+            return p1 * p2;
+        }
+
+        let result = multiply(4, 3);
+        document.getElementById("mul").innerHTML = "This is the result: " + result;
+
+        // object practice
+        const car = { type: "Fiat", model: "500", color: "white" };
+
+        // array practice 
+        const fruit = ["apple", "cherry", "kiwi", "plum"];
+
+        // comparison practice
+        function checkVotingAge() {
+            let age = document.getElementById("age").value;
+            let voteable = (age < 18) ? "Too young" : "Old enough";
+            document.getElementById("comp").innerHTML = voteable + " to vote.";
+        }
+
+        // Get current hour
+        const hour = new Date().getHours();
+        let greeting;
+
+        // if practice
+        if (hour < 18) {
+            greeting = "Have a good day!";
+        } else {
+            greeting = "Have a good night!";
+        }
+        document.getElementById("greet").innerHTML = greeting;
+
+        // loop practice
+        let text = "";
+        for (let i = 0; i < 5; i++) {
+            text += "The number is " + i + "<br>";
+        }
+        document.getElementById("loopf").innerHTML = text;
+
+        // switch practice (fixed)
+        let dayText;
+        switch (new Date().getDay()) {
+            case 6:
+                dayText = "Today is Saturday";
+                break;
+            case 0:
+                dayText = "Today is Sunday";
+                break;
+            default:
+                dayText = "Looking forward to the Weekend";
+        }
+        document.getElementById("switch").innerHTML = dayText;
+
+        // Display date function for button
+        function displayDate() {
+            alert("Current date and time: " + new Date());
+        }
+    </script>
+</body>
+
+</html>

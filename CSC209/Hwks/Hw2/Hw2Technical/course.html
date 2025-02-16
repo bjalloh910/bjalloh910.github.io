@@ -120,7 +120,7 @@
     <script>
         function toggleReadMe(){
             let content = document.getElementById("readme-content");
-            let button = document.getElementById("readme-btn");
+            let button = document.getElementById("readBtn");
 
             if(content.style.display === "none"){
                 content.style.display = "block";
@@ -130,6 +130,7 @@
                 button.textContent = "Read Me";
             }
         } 
+        document.getElementById("readBtn").addEventListener("click", toggleReadMe);
 
         const modeBtn = document.getElementById("btnMode");
 

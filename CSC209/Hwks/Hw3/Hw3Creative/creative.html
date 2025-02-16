@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Part 1</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header-right">
+        <a href="#Home">Home</a>
+        <a href="#About">About</a>
+        <a href="#Contact">Contact</a>
+        <button id="modebtn">Mode</button>
+    </header>
+
+    <main class="main-content">
+        <div class="self-words">
+            <div class="helloBox">
+                <span id="typewriter"></span>
+                <img src="Images/wave.png" width="30px">
+            </div>
+            <p>I'm a junior majoring in Computer Science.</p>
+            <p>My passion is software engineering, but I am deeply in love with web development.</p>
+            <p> I'm originally from Brooklyn, New York, but I currently live in Austin,Texas.</p>
+            <p>Fun fact: I love anything pink or yellow</p>
+        </div>
+        <div class="self-pic">
+            <div class="img-self">
+                <img src="Images/IMG_6210.png" width="300px">
+            </div>
+        </div>
+    </main>
+
+    <h2 class="textbox">My Favorite Things</h2>
+
+    
+    <div class="quoteBox">
+        <p id="quote" style="text-align: center;"></p>
+    </div>
+    <div class="button-wrapper">
+        <button id="qbtn">Click Me</button>
+    </div>
+    
+
+    <div class="grid-container">
+        <div class="grid-item"><img src="Images/pic1.png"></div>
+        <div class="grid-item"><img src="Images/Screenshot 2025-02-05 at 10.39.26 PM.png"></div>
+        <div class="grid-item"><img src="Images/soho.jpg"></div>
+        <div class="grid-item"><img src="Images/IMG_4912.png"></div>
+    </div>
+
+    <section>
+        <div class="num1">
+            <a href="https://www.amazon.com/Housemaid-Freida-McFadden/dp/1538742578">pic home</a>
+            <a href="https://www.takewalks.com/blog/soho-in-new-york">pic home</a>
+        </div>
+        <h3>This took me about 3 hours</h3>
+    </section>
+
+    <script>
+        const modeBtn = document.getElementById("modebtn");
+
+        modeBtn.addEventListener("click", function () {
+            document.body.classList.toggle("dark-mode");
+            
+        })
+
+
+        // Javscript for the quotes
+        const quoteArray = ["Success is not final, failure is not fatal: It is the courage to continue that counts. – Winston Churchill", 
+        "Believe you can and you're halfway there. – Theodore Roosevelt",
+        "Your time is limited, so don’t waste it living someone else’s life. – Steve Jobs",
+        "Opportunities don't happen. You create them. – Chris Grosser"];
+        
+        function showRandomQuote(){
+            let randIndex = Math.floor(Math.random() * quoteArray.length);
+            let randomQuote = quoteArray[randIndex];
+            
+            document.getElementById("quote").textContent = randomQuote;
+        }
+
+        document.getElementById("qbtn").addEventListener("click", showRandomQuote);
+
+        //Javascript for typewriting
+        const text = "Hello, I'm Bintu!";
+
+        let index = 0;
+
+        function typeWriter() {
+            if(index < text.length){
+                document.getElementById('typewriter').innerHTML += text.charAt(index);
+                index ++;
+                setTimeout(typeWriter, 100);
+            }
+        }
+        typeWriter();
+    </script>
+</body>
+</html>
