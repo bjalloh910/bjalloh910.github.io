@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple HTML Document</title>
+</head>
+<body>
+
+    <button onclick="myFunction()" style="background-color: rgb(144, 144, 199); border: 0px; padding: 10px; border-radius: 10px;">Click me</button>
+    <button onclick="checkFunction()" style="background-color: palegreen; border: 0px; padding: 10px; border-radius: 10px;">Click for checkbox</button>
+    <button onclick="emailFunction()" style="background-color: rgb(205, 168, 122); border: 0px; padding: 10px; border-radius: 10px">Click for Email</button>
+    <button onclick="fileFunction()" style="background-color: rgb(253, 253, 107); border: 0px; padding: 10px; border-radius: 10px">Click for file</button>
+    <script>
+        // input button tutorial
+        function myFunction(){
+            let x = document.createElement("INPUT");
+            x.setAttribute("type", "button");
+            x.setAttribute("value", "Click me");
+            document.body.appendChild(x);
+        }
+
+        // checkbox tutorial
+        function checkFunction(){
+            let checkBtn = document.createElement("INPUT");
+            checkBtn.setAttribute("type", "checkBox");
+            checkBtn.setAttribute("value", "click me");
+            document.body.appendChild(checkBtn);
+        }
+
+        // email tutorial 
+        function emailFunction(){
+            let emailBtn = document.createElement("INPUT");
+            emailBtn.setAttribute("type", "email");
+            emailBtn.setAttribute("value", "click me");
+            document.body.appendChild(emailBtn);
+        }
+        // file input tutorial
+        function fileFunction(){
+            let fileBtn = document.createElement("INPUT");
+            fileBtn.setAttribute("type", "file");
+            fileBtn.setAttribute("value", "click me");
+            document.body.appendChild(fileBtn);
+        }
+    </script>
+</body>
+</html>

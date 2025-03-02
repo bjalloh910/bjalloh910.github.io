@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 9</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <h1>Level 9</h1>
+    <div class="controls">
+        <label for="nrPoints">Number of Points:</label>
+        <input type="number" id="nrPoints" min="1" max="50" value="5">
+        <button id="generateBtn">Generate Points</button>
+        <button id="startBtn">Start Animation</button>
+        <button id="resetBtn">Reset Animation</button>
+        <div class="trace-control">
+            <input type="checkbox" id="showTrace">
+            <label for="showTrace">Show Motion Trace</label>
+        </div>
+    </div>
+    <canvas id="canvas1" width="400" height="300"></canvas>
+    <script>
+        const NRSTEPS = 100; // Number of animation steps
+    </script>
+    <script src="JS/script8.js"></script>
+    <script src="JS/script9.js"></script>
+</body>
+</html>

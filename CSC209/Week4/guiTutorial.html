@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple HTML Document</title>
+</head>
+<body>
+    <p>This is the tutorial for the gui canvas</p>
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
+
+    <canvas id="gradCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
+
+    <script>
+        const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext("2d");
+        ctx.fillStyle = "red";
+        ctx.fillRect(0,0,50,30);
+        ctx.beginPath();
+        // Set a start-point
+        ctx.moveTo(0, 0);
+        // Set an end-point
+        ctx.lineTo(200, 100);
+        ctx.lineWidth = 5;
+        ctx.stroke();
+
+        //radial Gradient 
+
+        const canvas1 = document.getElementById("gradCanvas");
+        const canv1 = canvas1.getContext("2d");
+
+        const grad=canv1.createRadialGradient(150,75,15,150,75,150);
+        grad.addColorStop(0,"lightblue");
+        grad.addColorStop(1,"darkblue");
+
+        canv1.fillStyle = grad;
+        canv1.fillRect(0,0,480,130);
+    </script>
+</body>
+</html>
