@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Slideshow</title>
+    <link rel="stylesheet" href="../CSS/photos.css">
+</head>
+<body>
+    <div class="slideshow-container">
+        
+        <div class="slide">
+            <img src="../Images/pic1.jpg" alt="Slide 1">
+            <p class="caption">Bubbles</p>
+        </div>
+        <div class="slide">
+            <img src="../Images/pic2.jpg" alt="Slide 2">
+            <p class="caption">Blossom</p>
+        </div>
+        <div class="slide">
+            <img src="../Images/pic3.jpg" alt="Slide 3">
+            <p class="caption">Blitz</p>
+        </div>
+        <div class="slide">
+            <img src="../Images/pic4.jpg" alt="Slide 3">
+            <p class="caption">Bloom</p>
+        </div>
+        <div class="slide">
+            <img src="../Images/pic5.jpg" alt="Slide 3">
+            <p class="caption">Buttercup</p>
+        </div>
+
+        <button class="prev" onclick="changeSlide(-1)">❮</button>
+        <button class="next" onclick="changeSlide(1)">❯</button>
+    </div>
+    <script src="../JS/photos.js"></script>
+</body>
+</html>

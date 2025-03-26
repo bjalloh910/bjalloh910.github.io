@@ -1,0 +1,148 @@
+* {
+    font-family: monospace;
+    padding: 10px 20px;
+}
+
+body {
+    background-color: #deb3e0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.dark-mode{
+    background-color: #7d2182;
+    color: white;
+}
+
+#modebtn {
+   border-radius: 15px; 
+   border: 0px;
+   width: 80px;
+   background: #a26ca5;
+   color: white;
+   cursor: pointer;
+}
+
+#modebtn:hover{
+    background-color: #d478d8;
+}
+
+.header-right{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.header-right a{
+    text-decoration: none;
+    position: relative;
+    color: white;
+}
+
+.header-right a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    width: 0;
+    height: 3px;
+    background-color: pink;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.main-content{
+    margin-top: 20px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.self-words{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.grid-item {
+    background-color: rgb(252, 209, 216);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.grid-item img{
+    width: 300px;
+}
+.grid-item:nth-child(1) img{
+    width: 500px;
+    height: 600px;
+}
+.grid-item:nth-child(2) img{
+    width: 500px;
+    height: 600px;
+
+}
+.grid-item:nth-child(3) img{
+    width: 500px;
+    height: 666px;
+}
+.grid-item:last-child img{
+    width: 500px;
+}
+
+.textbox{
+    text-align: center;
+    font-size: 35px;
+}
+
+#typewriter{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.helloBox{
+    margin-right: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.main-content .img-self img {
+    border-radius: 40px;
+}
+
+.quoteBox p{
+    color: rgb(22, 87, 134)
+}
+
+.button-wrapper {
+    text-align: center;
+}
+
+#qbtn {
+    margin: auto;
+    border-radius: 15px; 
+    border: 0px;
+    width: 120px;
+    background: #a26ca5;
+    color: white;
+    cursor: pointer;
+}

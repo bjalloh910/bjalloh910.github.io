@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio Hub 📚</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #321E25;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            background-color: #8B4E5E;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-width: 800px;
+            width: 90%;
+        }
+
+        h1 {
+            color: #C06378;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .folder-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .folder {
+            background-color: #E894A7;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .folder:hover {
+            transform: translateY(-5px);
+            background-color: #eeaebd;
+        }
+
+        .folder a {
+            text-decoration: none;
+            color: #FFE4E1;
+            font-size: 1.1em;
+        }
+
+        .folder-icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .cute-footer {
+            margin-top: 30px;
+            text-align: center;
+            color: #FFE4E1;
+            font-size: 0.9em;
+        }
+        .cat-image {
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: block;
+            margin: 0 auto 30px;
+        }
+        .mePic {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌟 My Homework Hub 🌟</h1>
+        <img src="200w.gif" width="200px" alt="cute cat" class="cat-image">
+        
+        <div class="folder-grid">
+            <div class="folder">
+                <div class="folder-icon">📝</div>
+                <a href="Hw1/hwk1Home.html">Homework 1</a>
+            </div>
+            <div class="folder">
+                <div class="folder-icon">📚</div>
+                <a href="Hw2/hw2homepage.html">Homework 2</a>
+            </div>
+            <div class="folder">
+                <div class="folder-icon">📓</div>
+                <a href="Hw3/hw3Startpage.html">Homework 3</a>
+            </div>
+            <div class="folder">
+                <div class="folder-icon">📖</div>
+                <a href="Hw4/startpage.html">Homework 4</a>
+            </div>
+            <div class="folder">
+                <div class="folder-icon">📔</div>
+                <a href="Hw5/startpage.html">Homework 5</a>
+            </div>
+            <div class="folder">
+                <div class="folder-icon">📒</div>
+                <a href="Hw6/startpage.html">Homework 6</a>
+            </div>
+        </div>
+
+        <div class="cute-footer">
+            <p>💜 By Bintu Jalloh 💜</p>
+        </div>
+    </div> 
+</body>
+</html>

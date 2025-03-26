@@ -1,0 +1,36 @@
+
+#grid{
+    display: grid;
+    gap: 1px;
+    margin: 20px auto;
+    width: 500px;
+    height: 500px;
+    border: 1px solid #000;
+    background: #DAC0A7;
+}
+
+.cell{
+    width: 100%;
+    aspect-ratio: 1;
+    background: white;
+    border: 1px solid #000;
+}
+
+.cell.alive{
+    background: #D7B8A3;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #80a43a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover{
+    background-color: #87b940;
+}
