@@ -1,0 +1,2 @@
+Hi Bintu!
+You're learning PHP file handling 📝
