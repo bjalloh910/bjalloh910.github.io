@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman - Who killed Kayla??</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../css/games.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Homemade+Apple&family=Cutive+Mono&display=swap" rel="stylesheet">
+    <script>
+        window.MYSTERY_HUB_CONFIG = {
+            navbarClock: true
+        };
+    </script>
+    <script src="../../clock/clock.js"></script>
+    <script src="../../backend/JS/game1.js"></script>
+</head>
+<body class="vintage-background">
+    <div class="paper-texture"></div>
+     
+    <!-- Header with Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="../../index.html">
+                    <h1>Mystery<span>Hub</span></h1>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../../index.html">Home Base</a></li>
+                <li><a href="game1.html">Field Operations</a></li>
+                <li><a href="../blog/blog.html">Case Files</a></li>
+                <li><a href="../movies/movies.html">Surveillance Footage</a></li>
+                <li><a href="../login.html" class="active">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="main-content">
+        <div class="container">
+            <div class="game-container">
+                <div class="evidence-tag">EXHIBIT A</div>
+                <div class="case-status">ACTIVE</div>
+                <div class="paper-clip"></div>
+                
+                <h1 class="game-title">The Kayla Case Files</h1>
+                <p class="game-description">
+                    <strong>MISSION BRIEFING:</strong> Kayla Bennett, 23, was found murdered in her apartment on April 12, 2025. 
+                    The killer left a series of cryptic clues at the crime scene. Your task is to decipher these clues by 
+                    completing this hangman puzzle to reveal the killer's identity. Each incorrect guess brings us closer 
+                    to losing crucial evidence. Proceed with caution, detective.
+                </p>
+                
+                <div class="hangman-wrapper">
+                    <div class="hangman-left">
+                        <div class="word-display" id="wordDisplay">
+                            <!-- Letter boxes will be generated here via JavaScript -->
+                        </div>
+                        
+                        <div class="keyboard" id="keyboard">
+                            <!-- Keyboard buttons will be generated here via JavaScript -->
+                        </div>
+                        
+                        <div class="game-status" id="gameStatus">
+                            Start guessing letters to identify the suspect...
+                        </div>
+                    </div>
+                    
+                    <div class="hangman-right">
+                        <canvas id="canvas" width="300" height="300"></canvas>
+                        
+                        <button class="hint-btn" id="hintBtn">Request Evidence <i class="fas fa-lightbulb"></i></button>
+                        <button class="new-game-btn" id="newGameBtn">New Investigation</button>
+                    </div>
+                </div>
+                
+                <div class="clue-section">
+                    <div class="clue-box" data-clue-number="1">
+                        Victim's phone revealed frequent communications with a male contact saved as "J" in the weeks before her death.
+                    </div>
+                    <div class="clue-box" data-clue-number="2">
+                        Security camera footage shows a figure in a dark jacket entering Kayla's building at 11:32 PM on the night of the murder.
+                    </div>
+                    <div class="clue-box" data-clue-number="3">
+                        Forensic analysis discovered foreign DNA under the victim's fingernails, suggesting a struggle.
+                    </div>
+                    <div class="clue-box" data-clue-number="4">
+                        An anonymous tip mentioned seeing a red sports car parked outside Kayla's apartment complex on the night of the murder.
+                    </div>
+                    <div class="clue-box" data-clue-number="5">
+                        The medical examiner's report indicates the murder weapon was likely a kitchen knife from the victim's own apartment.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+
+    <!-- Footer -->
+    <footer class="vintage-footer">
+        <div class="container">
+            <div class="footer-content">
+                <ul class="footer-links">
+                    <li><a href="../index.html">Headquarters</a></li>
+                    <li><a href="game1.html">Field Operations</a></li>
+                    <li><a href="../blog/blog.html">Case Files</a></li>
+                    <li><a href="../movies/movies.html">Surveillance Footage</a></li>
+                    <li><a href="../Pages/login.html">Agent Login</a></li>
+                </ul>
+                
+                <p class="copyright handwritten-note">Bintu Jalloh & Michelle Lawson, Mystery Hub</p>
+            </div>
+        </div>
+    </footer>
+     
+</body>
+</html>

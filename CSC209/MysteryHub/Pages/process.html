@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MysteryHub Project Documentation</title>
+  <link rel="stylesheet" href="../Assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Homemade+Apple&family=Cutive+Mono&display=swap" rel="stylesheet">
+  <script src="../Backend/JS/process.js" defer></script>
+</head>
+<body class="vintage-background">
+  <header>
+    <nav class="navbar">
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="documentation-container">
+      <h1 class="section-title">MysteryHub Documentation</h1>
+      
+      <section class="doc-section">
+        <h2>MysteryHub</h2>
+        <p>MysteryHub is a web application that contains interactive games, real-life cold case blogs, and suggestions for mystery films to give mystery fans a space to explore the worl of mystery!!!</p>
+      </section>
+
+      <button class="accordion">🕵️ Project Overview</button>
+      <div class="panel">
+        <p>This project was built using <strong>JavaScript, HTML, CSS</strong> for the frontend and <strong>PHP</strong> for the backend. Instead of a traditional database, we used <strong>JSON files</strong> to manage and store data in the application.</p>
+        <p>The decision to use JSON files rather than a traditional database was made to focus on core web development concepts without the added complexity of database management systems. This approach allowed us to concentrate on creating a good user experience while still having reliable data storage.</p>
+      </div>
+
+      <button class="accordion">🎯 Features</button>
+      <div class="panel">
+        <p><strong>Mini Mystery Games</strong>: Interactive detective games where players can solve mysteries through clues and deduction.</p>
+        <p><strong>True Crime & Cold Case Blog</strong>: Users can read, comment on, save, and upload real mystery stories.</p>
+        <p><strong>Mystery Movie Recommendations</strong>: A slideshow-style feature where users can browse movie recommendations.</p>
+        <p><strong>User Interactions</strong>:
+          <br>- Save/favorite blog stories for later reading
+          <br>- Comment and like under blog posts to engage with other mystery enthusiasts
+          <br>- Tooltip that gives user information on how to play the game
+          <br>- Play hangman with virtual hints and clues for an immersive mystery experience
+        </p>
+        <p><strong>User Authentication System</strong>:
+          <br>- Secure registration and login functionality
+          <br>- Profile management with customizable details
+          <br>- Profile picture upload and management
+          <br>- Secure logout functionality with session management
+        </p>
+        <p><strong>Admin Controls</strong>:
+          <br>- Special admin panel for content and user management
+          <br>- User oversight capabilities
+          <br>- Content moderation tools
+        </p>
+      </div>
+
+      <button class="accordion">🔍 How the Project Works</button>
+      <div class="panel">
+        <p>Users can register and log in to access the site. Once logged in, they can play mystery games, read and interact with blog posts, and explore movie recommendations. All user actions, like posting a story, liking, commenting, or updating their profile, are handled through forms and buttons that use JavaScript on the frontend and PHP on the backend.</p>
+        <p>Data is stored in JSON files, with separate files for:</p>
+        <p>- User accounts and profile information<br>
+           - Blog posts and comments<br>
+           - User preferences and saved content</p>
+        <p>Admins have access to a special page where they can manage users and blog content, ensuring the platform remains appropriate and engaging.</p>
+        <p>The application implements a role-based access control system, where regular users have standard privileges while administrators have expanded capabilities for content and user management.</p>
+      </div>
+
+      <button class="accordion">🧠 Team Contributions</button>
+      <div class="panel">
+        <h3>Bintu Jalloh</h3>
+        <p>- Site Design Planning and Brainstorming<br>
+           - Initial backend development [Php setup, register and login functionality, initial json data setup]<br>
+           - Implemented the Blog feature where users can write, update, save, like, and comment on blog posts.<br>
+           - Built the Register and Profile features, allowing users to sign up, upload a profile picture, write a bio, and update their information.<br>
+           - Set up backend PHP scripts to handle user authentication, form validation, add comments, create/update blog posts.<br>
+           - Implemented proper file path handling for uploaded images and content<br>
+           - Project Documentation</p>
+
+        <h3>Michelle Lawson</h3>
+        <p>- Site Design Planning and Brainstorming<br>
+           - Initial frontend Development [html pages and css]<br>
+           - Login functionality with session management<br>
+           - Game 1: Hangman with graphics and JavaScript implementation<br>
+           - Movies slideshow functionality with dynamic content loading<br>
+           - Fixed bugs in blog update functionality for improved reliability<br>
+           - Added functionality that allows a user to see their favorited articles displayed in their profile<br>
+           - Designed and implemented the vintage detective aesthetic throughout the site<br>
+           - Project Documentation revision + B.T.S. webpage</p>
+      </div>
+
+      <button class="accordion">🛠️ Technologies Used</button>
+      <div class="panel">
+        <p><strong>HTML5</strong>: For structured content and semantic markup</p>
+        <p><strong>CSS3</strong>: For styling and responsive design, including custom animations and transitions</p>
+        <p><strong>JavaScript (Vanilla)</strong>: For client-side interactivity and dynamic content</p>
+        <p><strong>PHP 7+</strong>: For server-side processing and session management</p>
+        <p><strong>JSON</strong>: As a database substitute for flexible data storage and retrieval</p>
+        <p><strong>File System Management</strong>: For handling user-uploaded content and profile pictures</p>
+        <p><strong>Session Management</strong>: For maintaining user state across the application</p>
+      </div>
+
+      <button class="accordion">🧪 Notes & Challenges</button>
+      <div class="panel">
+        <p>Since we used JSON files instead of a real database, we had to handle things like generating IDs and keeping the data consistent ourselves. This required custom implementation of:</p>
+        <p>- Unique ID generation for users, blog posts, and comments<br>
+           - Data integrity checks to prevent corruption or conflicts<br>
+           - Custom query-like functionality for searching and filtering data</p>
+        <p>We had to figure out a way to save the user's information temporally through session data, balancing security with user experience and persistent login states.</p>
+        <p>Using PHP was quite difficult because getting real-time updates without full page refresh was a big learning moment for us. We implemented techniques to:</p>
+        <p>- Use AJAX for data updates without page refreshes<br>
+           - Structure backend responses for JSON consumption by the frontend<br>
+           - Manage asynchronous updates to maintain data consistency</p>
+        <p>We also had to be really intentional about how we named things and organized routes so the frontend and PHP backend could communicate smoothly. This involved:</p>
+        <p>- Consistent naming conventions across files and functions<br>
+           - Structured API-like endpoints for frontend-backend communication<br>
+           - Thoughtful organization of files and directories</p>
+        <p>Getting the file paths right was a bit tricky, especially when it came to making sure image paths were correctly linked and displayed across different pages. We solved this by:</p>
+        <p>- Using both physical file paths for server operations and web-relative paths for client display<br>
+           - Implementing path translation functions for consistent referencing<br>
+           - Careful management of uploaded files and their associated references</p>
+      </div>
+
+      <button class="accordion">✅ Future Improvements</button>
+      <div class="panel">
+        <p>- Add real authentication with session or JWT-based login for enhanced security</p>
+        <p>- Integrate local storage or a lightweight database (like SQLite) for improved data management</p>
+        <p>- Expand mystery game library with more levels and hints for greater user engagement</p>
+        <p>- Allow users to edit or delete their submitted stories for better content management</p>
+        <p>- Implement a rating system for movies and blogs for enhanced community features</p>
+        <p>- Add more interactive elements to increase user engagement</p>
+        <p>- Develop a notification system for users to track interactions with their content</p>
+      </div>
+
+      <button class="accordion">📌 Planned Features</button>
+      <div class="panel">
+        <p>Users will be able to play <strong>three fun mini mystery games</strong>, each with animations and graphics for an immersive experience.</p>
+        <p>Users will be able to read <strong>real-life mystery stories</strong>, cold cases, and true crime write-ups.</p>
+        <p>- Comment on blog posts<br>
+           - Upload their own stories (as markdown files)<br>
+           - Favorite or save posts to their profile</p>
+        <p>A <strong>slideshow page</strong> will showcase recommended mystery movies.</p>
+        <p>- Rate movies (1 to 5 stars)<br>
+           - Save favorites<br>
+           - View average ratings<br>
+           - See rated movies on their profile</p>
+        <p><strong>Register/Login system</strong> with secure PHP sessions</p>
+        <p><strong>Personal profile page</strong></p>
+        <p>- View/edit personal info<br>
+           - View saved games, stories, and movies<br>
+           - View movie ratings they've given</p>
+        <p><strong>Admin dashboard</strong> (admin-only access)</p>
+        <p>- View all registered users<br>
+           - Add new movies to the slideshow<br>
+           - Delete inappropriate blog posts or stories<br>
+           - Feature selected blog posts</p>
+        <p>A <strong>real-time clock</strong> built using JavaScript</p>
+      </div>
+
+      <button class="accordion">🌟 What We Actually Implemented</button>
+      <div class="panel">
+        <p>One <strong>Hangman-style mystery game</strong> with custom graphics and gameplay logic</p>
+        <p>Users can read <strong>real-life mystery stories</strong>, cold cases, and true crime write-ups.</p>
+        <p>- Comment on blog posts with real-time updates<br>
+           - Upload their own stories (as markdown files) with formatting support<br>
+           - Save posts to their profile for later reading<br>
+           - Like blog posts to show appreciation for content</p>
+        <p>A <strong>slideshow page</strong> showcasing recommended mystery movies with custom transitions</p>
+        <p><strong>Register/Login system</strong> using secure PHP sessions</p>
+        <p>- Password hashing and secure authentication<br>
+           - Session management with proper security practices<br>
+           - Profile picture upload and management<br>
+           - Logout functionality with proper session destruction</p>
+        <p><strong>Personal profile page</strong></p>
+        <p>- View/edit personal info with real-time updates<br>
+           - View saved blog posts in a personalized interface<br>
+           - Custom styling to match the "agent dossier" theme</p>
+        <p><strong>Admin dashboard</strong></p>
+        <p>- View all registered users with detailed information<br>
+           - View user-submitted blog posts for moderation<br>
+           - Delete inappropriate stories/blogs to maintain community standards<br>
+           - Mark selected blog posts as "featured" to highlight quality content</p>
+        <p>A <strong>real-time clock</strong> using JavaScript with custom styling that matches the theme</p>
+      </div>
+
+      <button class="accordion">❗ Why We Didn't Implement All Planned Features</button>
+      <div class="panel">
+        <p>We originally planned to include three mystery games, but after developing the first one, we realized how much time and detail went into designing the gameplay logic, writing the story, and handling the logic with JavaScript. For example, in our current game, we had to build a clue system where players can click different hints to guess who the murderer is. All of this required thoughtful planning and testing. Rather than rush through the others, we decided to focus on the features on our site: blogs and movies.</p>
+
+        <p>We were able to create the slideshow to display mystery movie recommendations, but we didn't have enough time to implement the rating system and saving functionality. These features would have required additional backend logic to store ratings per user and update averages, which we weren't able to complete before the deadline.</p>
+            
+        <p>While we got the basic profile and blog-saving features working, we didn't have time to extend the profile functionality to include saved games or show movies a user rated. We couldn't add the option for Admins to add movies through the dashboard also. This was all due to a lack of time, as, given more time, we know exactly how we would do this.</p>
+            
+        <p>Overall, we focused on building core features that would make the site usable, interactive, and meet all the requirements. We prioritized getting a working blog system, game, and admin controls up and running. The main reason we couldn't add all the features we originally planned was due to time constraints and the extra logic required for each feature, along with the time needed to test and make sure everything worked properly. However, we're proud of how much we accomplished with the time we had.</p>
+      </div>
+
+      <button class="accordion">📚 Sources </button>
+      <div class="panel">
+        <p>- https://www.youtube.com/watch?v=-v36WcbDs9k - clock</p>
+        <p>- https://www.geeksforgeeks.org/build-a-hangman-game-using-javascript/?utm_source=auth&utm_medium=saved&utm_campaign=articles - Hangman Game</p>
+        <p>- https://codepen.io/adamsullovey/pen/BoJrbb - Door opening animation</p>
+        <p>- https://www.w3schools.com/howto/howto_js_accordion.asp - accordion</p>
+        <p>- https://www.w3schools.com/php/php_sessions.asp - php start session</p>
+        <p>- https://www.w3schools.com/php/func_filesystem_dirname.asp - PHP dirname() Function</p>
+        <p>- https://www.geeksforgeeks.org/javascript-fetch-method/ - javascript fetch method</p>
+        <p>- https://www.w3schools.com/php/keyword_require_once.asp - require_once php method</p>
+        <p>- https://www.w3schools.com/php/func_var_isset.asp - isset php</p>
+        <p>- https://www.w3schools.com/PHP/func_misc_uniqid.asp - uniqid php</p>
+        <p>- https://www.geeksforgeeks.org/how-to-make-a-redirect-in-php/ - redirecting php</p>
+        <p>- https://w3schools.tech/tutorial/php/php_flash_messages - flash messages php</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MysteryHub - Created by Bintu Jalloh & Michelle Lawson</p>
+  </footer>
+</body>
+</html>

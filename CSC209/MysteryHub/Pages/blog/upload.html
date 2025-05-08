@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Your Story - Mystery Hub</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../Css/blogupload.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="../../Backend/JS/upload.js"></script>
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Mystery Hub</div>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../games/game1.html">Games</a></li>
+                    <li><a href="blog.html" class="active">Blogs</a></li>
+                    <li><a href="../movies/movies.html">Movies</a></li>
+                    <li><a href="../profile.html">Profile</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Upload Form Content -->
+    <section class="main-content">
+        <div class="container">
+            <div class="upload-container">
+                <div class="paperclip"></div>
+                <div class="confidential-stamp">CONFIDENTIAL</div>
+                <h1 class="upload-title">Share Your Mystery Story</h1>
+                <p class="upload-description">
+                    Have a fascinating true crime story, unsolved mystery, or cold case to share? 
+                    Use the form below to contribute to our community of mystery enthusiasts.
+                </p>
+                
+                <form id="upload-form" action="../../Backend/Php/save_story.php" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="post-title">Story Title</label>
+                        <input type="text" id="post-title" name="post-title" placeholder="Enter a captivating title..." required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="post-category">Category</label>
+                            <select id="post-category" name="post-category" required>
+                                <option value="" disabled selected>Select a category</option>
+                                <option value="true-crime">True Crime</option>
+                                <option value="cold-cases">Cold Cases</option>
+                                <option value="unsolved-mysteries">Unsolved Mysteries</option>
+                                <option value="serial-killers">Serial Killers</option>
+                                <option value="disappearances">Disappearances</option>
+                                <option value="conspiracies">Conspiracies</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="read-time">Estimated Read Time (minutes)</label>
+                            <input type="number" id="read-time" name="read-time" min="1" max="60" placeholder="e.g., 5" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="post-excerpt">Short Excerpt/Summary (max 200 characters)</label>
+                        <textarea id="post-excerpt" name="post-excerpt" maxlength="200" placeholder="Write a brief summary that will appear in the story card..." required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Featured Image</label>
+                        <div class="image-upload" id="image-upload-area">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <p class="image-upload-text">Drag and drop an image here, or <span>browse</span></p>
+                            <p class="image-upload-text">Recommended size: 1200 x 800 pixels. Max size: 2MB</p>
+                            <input type="file" id="image-input" name="featured-image" accept="image/*" style="display: none;">
+                        </div>
+                        <div class="image-preview" id="image-preview">
+                            <img id="preview-img" src="#" alt="Preview">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="post-content">Story Content</label>
+                        <div class="editor-toolbar">
+                            <button type="button" class="editor-btn" title="Bold"><i class="fas fa-bold"></i></button>
+                            <button type="button" class="editor-btn" title="Italic"><i class="fas fa-italic"></i></button>
+                            <button type="button" class="editor-btn" title="Underline"><i class="fas fa-underline"></i></button>
+                            <div class="editor-divider"></div>
+                            <button type="button" class="editor-btn" title="Heading"><i class="fas fa-heading"></i></button>
+                            <button type="button" class="editor-btn" title="Quote"><i class="fas fa-quote-right"></i></button>
+                            <button type="button" class="editor-btn" title="List"><i class="fas fa-list-ul"></i></button>
+                            <button type="button" class="editor-btn" title="Numbered List"><i class="fas fa-list-ol"></i></button>
+                            <div class="editor-divider"></div>
+                            <button type="button" class="editor-btn" title="Insert Link"><i class="fas fa-link"></i></button>
+                            <button type="button" class="editor-btn" title="Insert Image"><i class="fas fa-image"></i></button>
+                        </div>
+                        <textarea id="post-content" name="post-content" placeholder="Write your story here..." required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="post-tags">Tags (press Enter after each tag)</label>
+                        <div class="tags-input" id="tags-container">
+                            <input type="text" id="tag-input" placeholder="Add tags...">
+                        </div>
+                        <input type="hidden" id="post-tags" name="post-tags">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Sources & References (optional)</label>
+                        <textarea name="post-sources"  id="post-sources" placeholder="List your sources and references here..."></textarea>
+                    </div>
+                    
+                    <div class="terms-checkbox">
+                        <input type="checkbox" id="terms-checkbox" name="terms-agreement" required>
+                        <label for="terms-checkbox">
+                            I confirm that this content is factually accurate to the best of my knowledge, does not infringe on any copyrights, 
+                            and complies with the <a href="#">Mystery Hub Community Guidelines</a>. I understand that false information or 
+                            inappropriate content may result in removal of the post and possible account restrictions.
+                        </label>
+                    </div>
+                    
+                    <div class="button-group">
+                        <button type="button" id="save-draft-btn" class="draft-btn">Save as Draft</button>
+                        <button type="submit" class="submit-btn">Publish Story</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <ul class="footer-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="../games/game1.html">Games</a></li>
+                <li><a href="blog.html">Stories</a></li>
+                <li><a href="../movies/movies.html">Movies</a></li>
+            </ul>
+            <p class="copyright">Bintu Jalloh & Michelle Lawson, Mystery Hub</p>
+        </div>
+    </footer>
+    
+</body>
+</html>

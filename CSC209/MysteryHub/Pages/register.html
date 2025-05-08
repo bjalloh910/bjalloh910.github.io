@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Operative Registration - Mystery Hub</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../css/register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script>
+        window.MYSTERY_HUB_CONFIG = {
+            navbarClock: true
+        };
+    </script>
+    <script src="../clock/clock.js"></script>
+    <script src="../JS/register.js"></script>
+
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="../index.html">
+                    <h1>Mystery<span>Hub</span></h1>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../games/game1.html">Games</a></li>
+                <li><a href="../blog/blog.html">Blogs</a></li>
+                <li><a href="../movies/movies.html">Movies</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Register Section -->
+    <section class="main-content">
+        <div class="container">
+            <div class="register-form-container">
+                <div class="case-number">OPERATIVE APPLICATION #MH-2025-4932</div>
+                <div class="file-tab">New Recruit</div>
+                <div class="paper-clip"></div>
+                <div class="stamp">Top Secret</div>
+                <div class="thread-holes">
+                    <div class="hole"></div>
+                    <div class="hole"></div>
+                    <div class="hole"></div>
+                    <div class="hole"></div>
+                </div>
+                
+                <div class="case-markings">
+                    <div class="file-number">Form MH-ID-7</div>
+                    <div>Date: April 16, 2025</div>
+                    <div>Clearance: Pending</div>
+                </div>
+                
+                <div class="id-photo-area" id="id-photo-container">
+                    <div class="id-photo-text" id="id-photo-text">Place ID Photo Here</div>
+                    <img id="preview-image" src="" alt="ID Photo Preview" style="display: none; max-width: 100%; max-height: 100%; object-fit: contain;">
+                </div>
+                
+                <h2 class="register-title">OPERATIVE REGISTRATION</h2>
+                
+                <form action="../Backend/Php/register.php" method="POST" class="case-file-form" enctype="multipart/form-data">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="typed-label" for="firstname">
+                                <i class="fas fa-user"></i> FIRST NAME:
+                            </label>
+                            <input type="text" id="firstname" name="firstname" required autocomplete="off">
+                        </div>
+                        <div class="form-group">
+                            <label class="typed-label" for="lastname">
+                                <i class="fas fa-user"></i> LAST NAME:
+                            </label>
+                            <input type="text" id="lastname" name="lastname" required autocomplete="off">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="typed-label" for="email">
+                            <i class="fas fa-envelope"></i> SECURE CONTACT:
+                        </label>
+                        <input type="email" id="email" name="email" required>
+                        <div class="form-note">* For secure transmissions and classified updates</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="typed-label" for="username">
+                            <i class="fas fa-id-badge"></i> CODENAME:
+                        </label>
+                        <input type="text" id="username" name="username" required>
+                        <div class="form-note">* Your unique identifier in the Mystery Hub network</div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="typed-label" for="password">
+                                <i class="fas fa-lock"></i> ENCRYPTION KEY:
+                            </label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="typed-label" for="confirm_password">
+                                <i class="fas fa-lock"></i> VERIFY KEY:
+                            </label>
+                            <input type="password" id="confirm_password" name="confirm_password" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="typed-label" for="security_question">
+                            <i class="fas fa-question-circle"></i> FIELD EXPERTISE:
+                        </label>
+                        <select id="security_question" name="security_question" class="form-control" required>
+                            <option value="">Select your area of expertise</option>
+                            <option value="detective">Field Detective</option>
+                            <option value="forensics">Forensic Analysis</option>
+                            <option value="profiler">Criminal Profiling</option>
+                            <option value="cryptography">Cryptography</option>
+                            <option value="surveillance">Surveillance Operations</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="profile_pic">Upload Facial Evidence</label>
+                        <input type="file" name="profile_picture" id="profile_pic" accept="image/*" onchange="previewImage(this)">
+                    </div>
+                    
+                    <button type="submit" class="auth-btn">
+                        <i class="fas fa-fingerprint"></i> Submit For Clearance
+                    </button>
+                </form>
+                
+                <div class="login-link">
+                    <p>Already an operative? <a href="login.html">Access secure terminal</a></p>
+                </div>
+                
+                <img src="../assets/images/fingerprint.png" alt="Fingerprint" class="fingerprint">
+                <div class="stamp-impression"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home Base</a></li>
+                        <li><a href="../games/game1.html">Field Operations</a></li>
+                        <li><a href="../blog/blog.html">Case Files</a></li>
+                        <li><a href="../movies/movies.html">Surveillance Footage</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal Notice</h3>
+                    <p>All case files contained herein are property of Mystery Hub Investigations. Unauthorized access will be prosecuted.</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Mystery Hub | Bintu Jalloh & Michelle Lawson</p>
+            </div>
+        </div>
+    </footer>
+
+    
+</body>
+</html>
